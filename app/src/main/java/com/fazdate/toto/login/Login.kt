@@ -36,8 +36,6 @@ class Login : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        // test@test.com test123
-        // asd@asd.com  asdasd
         loginbtn.setOnClickListener {
             auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString()).addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
